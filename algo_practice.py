@@ -28,3 +28,12 @@ def selectionsort(arr):
         arr[i], arr[min_value] = arr[min_value],arr[i]
     return arr
 print(selectionsort(arr))
+
+
+# final countdown
+# just like flexible countdown, add an extra parameter so that if mult is equal to para4, skip that number using a while loop
+def final_countdown(mult,low, high, para4):
+    while low < high:
+        low = low + 1
+        if low % mult == 0 and low != para4:
+            print low
