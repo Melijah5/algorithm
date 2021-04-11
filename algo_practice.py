@@ -37,3 +37,19 @@ def final_countdown(mult,low, high, para4):
         low = low + 1
         if low % mult == 0 and low != para4:
             print low
+            
+            
+# first plus length
+# given and array, return the sum of the first value in the array plus the arrays length.
+# what happens if the array's first value is not a number but a string or boolean.
+def first_plus_length(list):
+    if type(list[0]) is int:
+        sum = list[0] + len(list)
+    elif type(list[0]) is str:
+        sum = "First value of list is a String"
+    elif type(list[0]) is bool:
+        sum = "First value of list is a Boolean"
+    else:
+        sum = "idonno what it is?"
+    return sum
+
