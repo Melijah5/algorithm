@@ -53,3 +53,12 @@ def first_plus_length(list):
         sum = "idonno what it is?"
     return sum
 
+
+#if 2 given number represent your birth month and day in either order, log "how did you know?", else log "Just another day..."
+def log_day(num1, num2):
+    if num1 == 5 and num2 == 6:
+        print ("how did you know?")
+    elif num1 == 6 and num2 == 5:
+        print ("how did you know?")
+    else:
+        print("Just another day ...")
