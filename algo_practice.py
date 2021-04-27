@@ -71,3 +71,23 @@ def first_three(str):
 print(first_three('ipy'))
 print(first_three('python'))
 print(first_three('py'))
+
+
+# ******************
+# ---------- 'aaabbcccddbbee' => a3b2c3d2b2e2
+
+def encode(str):
+    output= '',
+    count=1,
+    char = str[0]
+    for i in range(len(str)):
+        if char ==str[i]:
+            count++
+        else if
+            char != str[i] || i == len(str):
+            output += char + count;
+            count =1;
+            char = str[i];
+        }
+    return output
+}
