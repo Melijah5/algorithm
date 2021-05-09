@@ -18,7 +18,7 @@ print(bubblesort(arr))
 # selection sort -  A sort algorithm that repeatedly searches remaining items to find the least one and moves it to its final location. The run time is Θ(n²),
 # where n is the number of elements. The number of swaps is O(n).
 
-arr =[9,2,3,6,7,85,4,2]
+arr =[9,2,3,6,7,85,4,2,5]
 
 def selectionsort(arr):
     for i in range(len(arr)):
