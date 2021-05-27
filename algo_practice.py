@@ -2,7 +2,7 @@
 
 # bubble sort
 # sort the array in ascending order
-arr =[8,9,4,7,25,1,5,2,1,6,4,3,4,34]
+arr =[8,9,4,7,25,1,5,2,1,6,4,3]
 
 def bubblesort(arr):
     for j in range(len(arr)-1):
