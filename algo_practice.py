@@ -92,8 +92,8 @@ def encode(str):
     return output
 }
 
-# bubble_sort([0, 5, 2, 3, 2])
-#     [0, 2, 2, 3, 5]
+# bubble_sort([0, 5, 2, 3, 2,6])
+#     [0, 2, 2, 3, 5,6]
 	
     length = len(collection)
     for i in range(length - 1):
