@@ -1,7 +1,7 @@
 # python code below!
 
 # bubble sort
-# sort the array in ascending order
+# sort the array in ascending orders
 arr =[8,9,4,7,25,1,5,2,1,4,6]
 
 def bubblesort(arr):
