@@ -1,3 +1,185 @@
+#javascript code here!
+
+//					 challenge 1
+//****************************************************************************************************************** */
+
+// 1. Given an array that contains exactly 1 duplicate number. find that duplicate.
+
+//     given: -[5, 1, 4, 3, 1, 2]
+//     output: -[1]
+
+//****************************************************************************************************************** */
+					//Using two pointers (nested loop)
+//****************************************************************************************************************** */
+function findDup(arr) {
+    output = []
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                output.push(arr[i])
+            }
+        }
+    }
+    console.log(output)
+
+}
+
+// findDup([5, 1, 4, 3, 1, 2, 3])
+
+
+// Time complexity - O(n2)
+//Space Complexity - O(1)
+
+//****************************************************************************************************************** */
+						//sort
+//****************************************************************************************************************** */
+
+// first sort the Array
+// then compare with the adjacent element
+
+function findDup1(arr) {
+    let sortArr = arr.sort()
+    let dup = [];
+    for (let i = 0; i < sortArr.length; i++) {
+        if (arr[i] == arr[i + 1]) {
+            dup.push(arr[i])
+        }
+    }
+    console.log(dup)
+
+}
+// findDup1([5, 1, 4, 3, 1, 2, 3])
+
+// Time complexity - O(nlogn)
+//Space Complexity - O(n)
+
+//****************************************************************************************************************** */
+						//Hashmap
+//****************************************************************************************************************** */
+
+// key value
+// 5   1
+// 1   1   --1
+// 4   1
+// 3   1   --1
+// 2   1
+
+function findDup2(arr) {
+    let Hashmap = new Map()
+    for (let i = 0; i < arr.length; i++) {
+        if (!Hashmap.has(i)) {
+            Hashmap.set(i, 1)
+        } else {
+            Hashmap.set(i, Hashmap.get(i) + 1)
+        }
+    }
+    for (let i = 0; i < Hashmap.has(); i++) {
+        if (Hashmap.get(i > 1)) {
+            console.log(i)
+        }
+
+    }
+
+
+}
+console.log(findDup2([5, 1, 4, 3, 1, 2, 3]))
+
+
+//****************************************************************************************************************** */
+
+// arr = [5, 1, 4, 3, 1, 2, 3]
+
+// result= []
+// i=0
+// value = Abs(5) = 5
+// index = 5 - 1 = 4
+// arr[4] <0 ? No
+// arr[4] *= -1
+
+
+// function findDup3(arr) {
+//     let result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         let value = Math.abs(arr[i]);
+//         let index = value - 1
+//         if (arr[index] < 0) {
+//             result.push(value)
+//         } else {
+//             arr[index] *= -1
+//         }
+
+//     }
+//     return result
+
+// }
+
+// console.log(findDup3([5, 1, 4, 3, 1, 2, 3]))
+
+//****************************************************************************************************************** */
+//****************************************************************************************************************** */
+// 2. reverse the whole string ?
+//     I / p = "I love icecream"
+// O / p = "maerceci evol I"
+//****************************************************************************************************************** */
+//						//loop from the end
+//****************************************************************************************************************** */
+
+function reverseString(str) {
+    let reverse = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverse = reverse + str[i]
+
+    }
+    console.log(reverse)
+
+}
+
+reverseString("I love icecream")
+
+// Time complexity - O(n)
+//Space Complexity - O(1)
+
+//****************************************************************************************************************** */
+						// recursion 
+//****************************************************************************************************************** */
+function reverseString(str) {
+    if (str === "")
+        return "";
+    else
+        return reverseString(str.substr(1)) + str.charAt(0);
+}
+console.log(reverseString("hello"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # python code below!
 
 # bubble sort
@@ -105,3 +287,7 @@ def encode(str):
         if not swapped:
             break  # Stop iteration if the collection is sorted.
     return collection
+
+
+
+
